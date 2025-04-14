@@ -1,9 +1,14 @@
 import React from "react"
 import foodRecipe from '../assets/foodRecipe.png'
 import MainNavigation from "../components/MainNavigation"
+//import Navbar from "./components/Navbar";
+import { useNavigate } from 'react-router-dom';
 
+//import Footer  from "../components/Footer"
 import RecipeItems from "../components/RecipeItems"
 export default function Home(){
+    
+    const navigate = useNavigate()
     return(
         <>
 
@@ -12,7 +17,7 @@ export default function Home(){
         <h1>Food Recipe</h1>
         <h5>Your go-to destination for mouthwatering recipes, easy cooking tips, and kitchen inspiration! Whether you're a beginner or a seasoned chef, our blog brings you a wide variety of dishes—from traditional comfort foods to trendy modern meals.
         Explore, cook, and share delicious moments with us. Because every recipe tells a story, and every meal brings people together.</h5>
-        <button>Share Your Recipe</button>
+        <button onClick={()=> navigate("/addRecipe")}>Share Your Recipe</button>
             </div>
             <div className="right">
             <img src={foodRecipe} width="320px" height="300px"></img>

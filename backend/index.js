@@ -13,6 +13,7 @@ app.use(express.json())
   //  res.json({message:"hello"})
 //})
 app.use(cors())
+app.use(express.static("public"))
 app.use("/",require("./routes/user"))
 app.use("/recipe",require("./routes/recipe"))
 app.listen(PORT,(err)=>{

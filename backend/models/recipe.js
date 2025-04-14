@@ -4,8 +4,8 @@ const recipeSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    Ingredients:{
-        type:[String],
+    ingredients:{
+        type:Array,
         required:true
     },
     instructions:{
