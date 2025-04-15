@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Modal from '../components/Modal'
-import InputForm from '../components/inputForm'
+import Modal from './Modal'
+import InputForm from './InputForm'
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
@@ -17,11 +17,11 @@ export default function Navbar() {
     if(token){
       localStorage.removeItem("token")
       localStorage.removeItem("user")
-      setIsLogin(true)  //user is logged in
+      setIsLogin(true)
 
     }
     else{
-      setIsOpen(true)  //user is not logged in
+      setIsOpen(true)
     }
   }
 

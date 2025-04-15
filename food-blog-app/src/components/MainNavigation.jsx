@@ -1,16 +1,14 @@
-import React from "react"
-import { Outlet } from "react-router-dom"
-//if error shows here then change navbar =>Navbar
-// Footer => footer
-import Navbar from '../components/navbar'
-import Footer from "../components/Footer"
-export default function MainNavigation(){
-    return(
-        <>
-        <Navbar/>
-        <Outlet/>
-        <Footer/>
-        </>
-    )
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
+import Navbar from './Navbar'
 
+export default function MainNavigation() {
+  return (
+   <>
+    <Navbar/>
+    <Outlet/>
+    <Footer/>
+   </>
+  )
 }
